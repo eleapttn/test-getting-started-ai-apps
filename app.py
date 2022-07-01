@@ -5,8 +5,11 @@ app = Flask(__name__)
 @app.route('/', methods=['POST'])
 def HelloWorld():
 
-    data = request.get_json()
-    response = 'Hello ' + data + '. Congratulations, you have launched your first AI App!'
+    #data = request.get_json()
+    #response = 'Hello ' + data + '. Congratulations, you have launched your first AI App!'
+    response = {
+        'response': 'Hello world!'
+    }
 
     return jsonify(response)
 
